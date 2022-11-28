@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     public void UpdateData(GunData gunData)
     {
         this.gunData = gunData;
-        StartCoroutine(DePop());
+        StartCoroutine(Kill());
     }
 
     public void AddForce(Vector2 force)
@@ -19,9 +19,26 @@ public class Bullet : MonoBehaviour
         rb.AddForce(force, ForceMode2D.Impulse);
     }
 
-    IEnumerator DePop()
+    IEnumerator Kill()
     {
         yield return new WaitForSeconds(gunData.bulletLife);
+        DePop();
+    }
+
+    void DePop()
+    {
         Pooler.instance.DePop(gameObject.name.Replace("(Clone)", String.Empty), gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (!col.gameObject.CompareTag("Player"))
+        {
+            if (col.gameObject.CompareTag("Enemy"))
+            {
+                col.gameObject.GetComponent<Mob>().TakeDamage(gunData.bulletDamage, col.gameObject.name);
+            }
+            DePop();
+        }
     }
 }

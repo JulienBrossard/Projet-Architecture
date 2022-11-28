@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Mob : MonoBehaviour
+public class Mob : Entity
 {
     
 }
