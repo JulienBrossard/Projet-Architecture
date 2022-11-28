@@ -114,6 +114,54 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Player Shoot"",
+            ""id"": ""669bae34-b07f-496a-9e2d-4df1200c8b0e"",
+            ""actions"": [
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""f8b77163-2b88-490c-856f-2a12648563ca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Reload"",
+                    ""type"": ""Button"",
+                    ""id"": ""c4afbe8c-0d8a-4748-9afc-8113fb659550"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b48920ae-10b2-4e80-bf57-818f8375c505"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb2e5fb4-48fa-4606-82e7-cc1d2471fca7"",
+                    ""path"": ""<Keyboard>/#(R)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -122,6 +170,10 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         m_PlayerMovement = asset.FindActionMap("Player Movement", throwIfNotFound: true);
         m_PlayerMovement_Movement = m_PlayerMovement.FindAction("Movement", throwIfNotFound: true);
         m_PlayerMovement_Dash = m_PlayerMovement.FindAction("Dash", throwIfNotFound: true);
+        // Player Shoot
+        m_PlayerShoot = asset.FindActionMap("Player Shoot", throwIfNotFound: true);
+        m_PlayerShoot_Shoot = m_PlayerShoot.FindAction("Shoot", throwIfNotFound: true);
+        m_PlayerShoot_Reload = m_PlayerShoot.FindAction("Reload", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -218,9 +270,55 @@ public partial class @PlayerInputs : IInputActionCollection2, IDisposable
         }
     }
     public PlayerMovementActions @PlayerMovement => new PlayerMovementActions(this);
+
+    // Player Shoot
+    private readonly InputActionMap m_PlayerShoot;
+    private IPlayerShootActions m_PlayerShootActionsCallbackInterface;
+    private readonly InputAction m_PlayerShoot_Shoot;
+    private readonly InputAction m_PlayerShoot_Reload;
+    public struct PlayerShootActions
+    {
+        private @PlayerInputs m_Wrapper;
+        public PlayerShootActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Shoot => m_Wrapper.m_PlayerShoot_Shoot;
+        public InputAction @Reload => m_Wrapper.m_PlayerShoot_Reload;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerShoot; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerShootActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerShootActions instance)
+        {
+            if (m_Wrapper.m_PlayerShootActionsCallbackInterface != null)
+            {
+                @Shoot.started -= m_Wrapper.m_PlayerShootActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_PlayerShootActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_PlayerShootActionsCallbackInterface.OnShoot;
+                @Reload.started -= m_Wrapper.m_PlayerShootActionsCallbackInterface.OnReload;
+                @Reload.performed -= m_Wrapper.m_PlayerShootActionsCallbackInterface.OnReload;
+                @Reload.canceled -= m_Wrapper.m_PlayerShootActionsCallbackInterface.OnReload;
+            }
+            m_Wrapper.m_PlayerShootActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+                @Reload.started += instance.OnReload;
+                @Reload.performed += instance.OnReload;
+                @Reload.canceled += instance.OnReload;
+            }
+        }
+    }
+    public PlayerShootActions @PlayerShoot => new PlayerShootActions(this);
     public interface IPlayerMovementActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+    }
+    public interface IPlayerShootActions
+    {
+        void OnShoot(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
     }
 }

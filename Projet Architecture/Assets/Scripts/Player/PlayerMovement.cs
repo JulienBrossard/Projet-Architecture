@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         // Dash
         if (playerInputs.PlayerMovement.Dash.WasPressedThisFrame() && currentStats.currentDashCooldown <= 0)
         {
-            rb.AddForce(Vector3.right * playerdata.dashForce, ForceMode2D.Impulse);
+            rb.AddForce(rb.velocity.normalized * playerdata.dashForce, ForceMode2D.Impulse);
             currentStats.currentDashCooldown = playerdata.dashCooldown;
             currentStats.currentSpeed = playerdata.dashForce;
         }
