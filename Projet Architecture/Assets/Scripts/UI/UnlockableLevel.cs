@@ -16,7 +16,7 @@ public class UnlockableLevel : MonoBehaviour
 
     private void Init()
     {
-        levelName.text = shopItem.name;
+        levelName.text = shopItem.itemName;
         levelCost.text = $"Cost: {shopItem.itemCost}";
         levelImage.sprite = shopItem.itemSprite;
         levelImage.color = new Color(1.0f, 1.0f, 1.0f, 0.35f);
