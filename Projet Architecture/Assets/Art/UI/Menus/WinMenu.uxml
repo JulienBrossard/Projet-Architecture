@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="Quit" src="project://database/Assets/Art/UI/Templates/QuitButton.uxml?fileID=9197481963319205126&amp;guid=527f13b06200c8e4c94404f7dc28e05f&amp;type=3#QuitButton" />
+    <Style src="project://database/Assets/Art/UI/Style%20Sheets/PopupStyle.uss?fileID=7433441132597879392&amp;guid=dcd634a6026a29b439e2c3325663c711&amp;type=3#PopupStyle" />
+    <ui:GroupBox name="Popup" focusable="false" class="ButtonStyleSheet background" style="flex-direction: column; align-items: center; position: relative; background-color: rgb(75, 75, 75); left: 15%; justify-content: center; top: 42px; right: 590px; bottom: ; flex-basis: auto; flex-shrink: 0; height: 816px;">
+        <ui:Label text="You Win" display-tooltip-when-elided="true" name="Title" class="title" style="flex-basis: auto;" />
+        <ui:TextField picking-mode="Ignore" text="Score" name="Score" style="justify-content: center; align-items: auto;" />
+        <ui:GroupBox name="Buttons" style="flex-direction: row;">
+            <ui:Button text="Restart" display-tooltip-when-elided="true" name="Restart" style="width: 100px; height: 40px;" />
+            <ui:Instance template="Quit" name="Quit" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

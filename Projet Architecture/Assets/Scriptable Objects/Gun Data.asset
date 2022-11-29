@@ -18,3 +18,4 @@ MonoBehaviour:
   bulletLife: 2
   bulletDamage: 10
   reloadTime: 1
+  maxAmmo: 15

@@ -5,9 +5,9 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     [Header("Gun Data")]
-    [SerializeField] GunData gunData;
+    [SerializeField] private GunData gunData;
     [Header("Current Stats")]
-    [SerializeField] GunStats gunCurrentStats;
+    [SerializeField] public GunStats gunCurrentStats;
 
     private GameObject currentBullet;
     private Bullet bulletScript;
@@ -16,6 +16,7 @@ public class Gun : MonoBehaviour
     private void Start()
     {
         gunCurrentStats.currentAmmo = gunData.maxAmmo;
+        gunCurrentStats.gunData = Instantiate(gunData);
     }
 
     private void Update()
@@ -39,12 +40,12 @@ public class Gun : MonoBehaviour
     {
         if (gunCurrentStats.shootCooldown <= 0 && !isReload)
         {
-            currentBullet = Pooler.instance.Pop(gunData.bulletName);
+            currentBullet = Pooler.instance.Pop(gunCurrentStats.gunData.bulletName);
             currentBullet.transform.position = transform.position;
             bulletScript = currentBullet.GetComponent<Bullet>();
-            bulletScript.UpdateData(gunData);
-            bulletScript.AddForce(gunData.bulletForce * dir);
-            gunCurrentStats.shootCooldown = gunData.fireRate;
+            bulletScript.UpdateData(gunCurrentStats.gunData);
+            bulletScript.AddForce(gunCurrentStats.gunData.bulletForce * dir);
+            gunCurrentStats.shootCooldown = gunCurrentStats.gunData.fireRate;
             gunCurrentStats.currentAmmo--;
             if (gunCurrentStats.currentAmmo <= 0)
             {
@@ -58,8 +59,8 @@ public class Gun : MonoBehaviour
         if (!isReload)
         {
             isReload = true;
-            yield return  new WaitForSeconds(gunData.reloadTime);
-            gunCurrentStats.currentAmmo = gunData.maxAmmo;
+            yield return  new WaitForSeconds(gunCurrentStats.gunData.reloadTime);
+            gunCurrentStats.currentAmmo = gunCurrentStats.gunData.maxAmmo;
             isReload = false;
         }
         else
@@ -74,4 +75,5 @@ public class GunStats
 {
     public float shootCooldown;
     public int currentAmmo;
+    public GunData gunData;
 }
