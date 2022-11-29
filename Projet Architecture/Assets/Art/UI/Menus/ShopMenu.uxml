@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="Quit" src="project://database/Assets/Art/UI/QuitButton.uxml?fileID=9197481963319205126&amp;guid=527f13b06200c8e4c94404f7dc28e05f&amp;type=3#QuitButton" />
+    <Style src="project://database/Assets/Art/UI/ButtonStyleSheet.uss?fileID=7433441132597879392&amp;guid=135e0fae9ae7a7c48950b1ece4bc82e4&amp;type=3#ButtonStyleSheet" />
+    <ui:GroupBox name="Popup" class="ButtonStyleSheet" style="flex-direction: row;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="Title" style="flex-basis: auto;" />
+        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="filler text" name="PlayerName" />
+        <ui:GroupBox name="Buttons">
+            <ui:Button text="Button1" display-tooltip-when-elided="true" name="Restart" style="width: 100px; height: 40px;" />
+            <ui:Instance template="Quit" name="Quit" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>
