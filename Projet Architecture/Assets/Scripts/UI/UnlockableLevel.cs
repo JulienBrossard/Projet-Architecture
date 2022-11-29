@@ -32,6 +32,14 @@ public class UnlockableLevel : MonoBehaviour
         }
     }
 
+    public void TryLoadLevel()
+    {
+        if (shopItem.isUnlocked)
+        {
+            // load proper scene scene
+        }
+    }
+
 
     // turn into an interface for various types of shop items
     private void OnUnlock()
