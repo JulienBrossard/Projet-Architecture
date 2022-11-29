@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SpeedBuff
   m_EditorClassIdentifier: 
   buffType: 2
-  value: 10
+  value: 1

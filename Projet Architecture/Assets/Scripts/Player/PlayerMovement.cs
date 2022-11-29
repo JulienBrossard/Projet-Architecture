@@ -8,17 +8,18 @@ public class PlayerMovement : MonoBehaviour
 
     private PlayerInputs playerInputs; // Player Inputs
     [Header("Player Data")]
-    public PlayerData playerdata; // Player Data
+    [SerializeField] private PlayerData playerdata; // Player Data
     [Header("Rigidbody")]
     [SerializeField] private Rigidbody2D rb; // Player Rigidbody
     [Header("Current Stats")]
-    [SerializeField] PlayerMovementStats currentStats; // Current Stats
+    [SerializeField] public PlayerMovementStats currentStats; // Current Stats
     
     
     void Start()
     {
         currentStats = new PlayerMovementStats(); // Init stats
         playerInputs = InputManager.instance.playerInputs; // Get player inputs
+        currentStats.playerData = Instantiate(playerdata);
     }
 
     void Update()
@@ -32,14 +33,14 @@ public class PlayerMovement : MonoBehaviour
         // Acceleration
         if (playerInputs.PlayerMovement.Movement.ReadValue<Vector2>() != Vector2.zero)
         {
-            currentStats.currentSpeed = Mathf.Lerp(currentStats.currentSpeed, playerdata.speed, playerdata.acceleration * Time.deltaTime);
+            currentStats.currentSpeed = Mathf.Lerp(currentStats.currentSpeed, currentStats.playerData.speed, currentStats.playerData.acceleration * Time.deltaTime);
             rb.velocity = playerInputs.PlayerMovement.Movement.ReadValue<Vector2>() *  currentStats.currentSpeed;
         }
         
         // Deceleration
         else
         {
-            currentStats.currentSpeed = Mathf.Lerp(currentStats.currentSpeed, 0, playerdata.deceleration * Time.deltaTime);
+            currentStats.currentSpeed = Mathf.Lerp(currentStats.currentSpeed, 0, currentStats.playerData.deceleration * Time.deltaTime);
             rb.velocity = rb.velocity.normalized *  currentStats.currentSpeed;
         }
     }
@@ -60,9 +61,9 @@ public class PlayerMovement : MonoBehaviour
         // Dash
         if (playerInputs.PlayerMovement.Dash.WasPressedThisFrame() && currentStats.currentDashCooldown <= 0)
         {
-            rb.AddForce(rb.velocity.normalized * playerdata.dashForce, ForceMode2D.Impulse);
-            currentStats.currentDashCooldown = playerdata.dashCooldown;
-            currentStats.currentSpeed = playerdata.dashForce;
+            rb.AddForce(rb.velocity.normalized * currentStats.playerData.dashForce, ForceMode2D.Impulse);
+            currentStats.currentDashCooldown = currentStats.playerData.dashCooldown;
+            currentStats.currentSpeed = currentStats.playerData.dashForce;
         }
     }
 }
@@ -74,4 +75,6 @@ public class PlayerMovementStats
     public float currentSpeed;
     [Header("Dash")]
     public float currentDashCooldown;
+
+    [Header("Data")] public PlayerData playerData;
 }
