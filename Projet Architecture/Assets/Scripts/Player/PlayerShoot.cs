@@ -11,7 +11,7 @@ public class PlayerShoot : MonoBehaviour
     private Vector2 playerScreenPos;
     private Vector2 direction;
     [Header("Gun")]
-    [SerializeField] private Gun gun;
+    [SerializeField] public Gun gun;
     private PlayerInputs playerInputs;
 
     private void Start()

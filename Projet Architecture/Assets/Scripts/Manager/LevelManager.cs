@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml;
 using Pathfinding;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -46,6 +45,12 @@ public class LevelManager : MonoBehaviour
             npcRemaining--;
             yield return new WaitForSeconds(Random.Range(0, waves[currentWave].spawnRate));
         }
+        yield return new WaitForSeconds(waves[currentWave].timeBetweenWaves);
+        if (currentWave < waves.Count - 1)
+        {
+            currentWave++;
+            SpawnWave();
+        }
     }
 }
 
@@ -54,6 +59,7 @@ public class Wave
 {
     public List<Npc> npcs;
     public float spawnRate;
+    public float timeBetweenWaves;
 }
 
 [Serializable]

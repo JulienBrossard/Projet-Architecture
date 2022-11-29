@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4658423719939800242}
   - component: {fileID: 4658423719939800243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 4658423719987837984}
   - component: {fileID: 4658423719987838015}
   - component: {fileID: 4658423719987838012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
