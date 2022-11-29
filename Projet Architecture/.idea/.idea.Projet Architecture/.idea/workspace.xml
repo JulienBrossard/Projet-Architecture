@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="81dbf7b1-224d-4c71-ae05-5cffc2ab24bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet Architecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet Architecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene Julien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene Julien.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/MobManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/MobManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Images/Top Down worlds.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Images/Top Down worlds.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Tilemaps/Worlds.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Tilemaps/Worlds.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/GameManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/GameManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Maps/Map1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Maps/Map1.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../I-can-t-bear-you/I can't bear you/Assets/Scripts/Npc/Awareness.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/NavMeshPlus-master/NavMeshComponents/Scripts/NavMeshSurface2d.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/Entity/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/MobManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Npc/Mob.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Guns/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,7 +46,6 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "rider.run.widget.enabled.cache": "false",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,6 +89,7 @@
       <updated>1669633210864</updated>
       <workItem from="1669633221465" duration="14589000" />
       <workItem from="1669677054289" duration="3800000" />
+      <workItem from="1669715467629" duration="1800000" />
     </task>
     <servers />
   </component>
