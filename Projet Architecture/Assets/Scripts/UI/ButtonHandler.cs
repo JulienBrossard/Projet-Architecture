@@ -13,40 +13,37 @@ public class ButtonHandler : MonoBehaviour
 
     private Toggle m_Toggle;
 
-    private Button m_Button;
-
+    private Button buyButton;
 
 
     public void OnEnable()
     {
         var rootElement = m_UIDocument.rootVisualElement;
 
-        m_Button = rootElement.Query<Button>("EventButton");
+        buyButton = rootElement.Query<Button>("Buy");
+        buyButton.clickable.clicked += OnButtonClicked;
 
-        m_Button.clickable.clicked += OnButtonClicked;
-
-        m_Toggle = rootElement.Query<Toggle>("ColorToggle");
+        /*m_Toggle = rootElement.Query<Toggle>("ColorToggle");
 
         m_Toggle.RegisterValueChangedCallback(OnToggleValueChanged);
 
         m_Label = rootElement.Query<Label>("IncrementLabel");
 
-        m_Label.text = m_ButtonClickCount.ToString();
+        m_Label.text = m_ButtonClickCount.ToString();*/
     }
 
 
     private void OnDisable()
     {
-        m_Button.clickable.clicked -= OnButtonClicked;
+        buyButton.clickable.clicked -= OnButtonClicked;
 
-        m_Toggle.UnregisterValueChangedCallback(OnToggleValueChanged);
+        //m_Toggle.UnregisterValueChangedCallback(OnToggleValueChanged);
     }
-
 
 
     private void OnButtonClicked()
     {
-        //
+        Debug.Log("buying"); 
     }
 
 
