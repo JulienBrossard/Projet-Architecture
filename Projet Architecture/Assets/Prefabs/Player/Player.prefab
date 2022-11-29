@@ -48,6 +48,7 @@ MonoBehaviour:
   gunCurrentStats:
     shootCooldown: 0
     currentAmmo: 0
+    gunData: {fileID: 0}
 --- !u!1 &4658423719987837987
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +62,9 @@ GameObject:
   - component: {fileID: 4658423719987837984}
   - component: {fileID: 4658423719987838015}
   - component: {fileID: 4658423719987838012}
+  - component: {fileID: 2059707927}
+  - component: {fileID: 2059707925}
+  - component: {fileID: 2059707926}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -174,6 +178,7 @@ MonoBehaviour:
   currentStats:
     currentSpeed: 0
     currentDashCooldown: 0
+    playerData: {fileID: 0}
 --- !u!114 &4658423719987838012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +197,49 @@ MonoBehaviour:
   camera: {fileID: 0}
   player: {fileID: 4658423719987838014}
   gun: {fileID: 4658423719939800243}
+--- !u!70 &2059707927
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658423719987837987}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!114 &2059707925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658423719987837987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6872b7ab45697234eac1461b2426715b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2059707926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658423719987837987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3d5a6b3e9871a4685f2ea55780f91b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStats:
+    currentHealth: 0
+  entityData: {fileID: 11400000, guid: dcffc2ca524ab2b44ab424007310262e, type: 2}
+  playerCollision: {fileID: 2059707925}
+  playerMovement: {fileID: 4658423719987838015}
+  PlayerShoot: {fileID: 4658423719987838012}

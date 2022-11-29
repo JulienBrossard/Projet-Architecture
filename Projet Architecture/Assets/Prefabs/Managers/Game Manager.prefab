@@ -49,6 +49,7 @@ MonoBehaviour:
     - npc: {fileID: 1884161696825631968, guid: 46405aa28492f0941aaf24a712ed9736, type: 3}
       amount: 10
     spawnRate: 2
+    timeBetweenWaves: 10
   player: {fileID: 0}
 --- !u!1 &1523054105713487251
 GameObject:
@@ -104,6 +105,24 @@ MonoBehaviour:
   - key: Mob
     pool:
       prefab: {fileID: 1884161696825631968, guid: 46405aa28492f0941aaf24a712ed9736, type: 3}
+      baseCount: 100
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: Speed Collectible
+    pool:
+      prefab: {fileID: 680882576823948859, guid: ecfaf081f38f41646a38e9bdceea842c, type: 3}
+      baseCount: 100
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: Fire Rate Collectible
+    pool:
+      prefab: {fileID: 619098091442798260, guid: d5034db1a8f5faa4ba451fbe06e53dfd, type: 3}
+      baseCount: 100
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: Damage Collectible
+    pool:
+      prefab: {fileID: 5615506098131462620, guid: eeadeaadb38803e4399016ebd859e17f, type: 3}
       baseCount: 100
       baseRefreshSpeed: 5
       refreshSpeed: 5
@@ -219,7 +238,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523054106418754288}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
