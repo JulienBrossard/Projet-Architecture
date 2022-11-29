@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Art/UI/Style%20Sheets/ButtonStyleSheet.uss?fileID=7433441132597879392&amp;guid=135e0fae9ae7a7c48950b1ece4bc82e4&amp;type=3#ButtonStyleSheet" />
+    <ui:GroupBox name="Popup" style="flex-direction: column; align-items: center;">
+        <ui:Label text="SHOP" display-tooltip-when-elided="true" name="Title" style="flex-basis: auto; justify-content: flex-start; flex-direction: row; height: 18px; width: 184px; align-items: auto; position: relative; -unity-text-align: upper-center;" />
+        <ui:GroupBox name="Buttons">
+            <ui:Button text="Buy" display-tooltip-when-elided="true" name="Buy" style="width: 100px; height: 40px;" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

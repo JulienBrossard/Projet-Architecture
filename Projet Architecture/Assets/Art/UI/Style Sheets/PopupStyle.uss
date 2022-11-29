@@ -1,0 +1,73 @@
+.background {
+
+   /*background-image: url('/Assets/Assets/OptionsMenu.png#OptionsMenu');*/
+
+   width: 600px;
+
+   height: 400px;
+
+}
+
+ 
+
+.title {
+
+   font-size: 32px;
+
+   color: rgb(255, 0, 0);
+
+}
+
+ 
+
+.unity-base-field__input {
+
+   background-color: rgba(0, 0, 0, 0);
+
+   /*background-image: url('/Assets/Assets/OptionsMenu9Slice.png#OptionsMenu9Slice_2');*/
+
+   width: 300px;
+
+   height: 75px;
+
+   font-size: 20px;
+
+   color: rgba(255, 255, 255, 0.5);
+
+   -unity-text-align: middle-center;
+
+}
+
+ 
+
+.unity-button {
+
+   color: white;
+
+   background-color: rgba(0, 0, 0, 0);
+
+   /*background-image: url('/Assets/Assets/StartMenu.png#StartMenu_ButtonDefault');*/
+
+   width: 160px;
+
+   height: 30px;
+
+   -unity-slice-bottom: 1;
+
+}
+
+ 
+
+.unity-button:hover {
+
+   color: rgb(0, 21, 255);
+
+}
+
+ 
+
+#Restart {
+
+   -unity-background-image-tint-color: rgb(112, 202, 125);
+
+}
