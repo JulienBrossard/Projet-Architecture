@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" style="width: 100px; height: 40px;" />
+</ui:UXML>
