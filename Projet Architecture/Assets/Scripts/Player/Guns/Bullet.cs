@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
         {
             if (col.gameObject.CompareTag("Enemy"))
             {
-                col.gameObject.GetComponent<Mob>().TakeDamage(gunData.bulletDamage, col.gameObject.name);
+                col.gameObject.GetComponent<Entity>().TakeDamage(gunData.bulletDamage, col.gameObject.name);
             }
             DePop();
         }
