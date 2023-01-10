@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/AXD_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=94fcc8293385bdb409202b21a34861f6&amp;type=3#MainMenu" />
+    <ui:VisualElement name="Background" style="width: 100%; height: 100%; align-items: center;">
+        <ui:VisualElement name="Title" style="background-image: url(&apos;project://database/Assets/AXD_UI/UI/_MainMenu/ChopChop_Title.png?fileID=2800000&amp;guid=becd0826c0305b94eb763b64136ae0c4&amp;type=3#ChopChop_Title&apos;); width: 30%; height: 30%; align-items: auto;" />
+        <ui:VisualElement name="Button-Group" style="margin-top: 2%; align-items: center; -unity-text-align: middle-left; flex-wrap: nowrap; flex-direction: column; height: 55%;">
+            <ui:Button text="Play" display-tooltip-when-elided="true" name="Button-Play" class="Button-Main-Menu" style="width: 100%; height: 30%; margin-top: 10px; margin-bottom: 5px;" />
+            <ui:Button text="Settings" display-tooltip-when-elided="true" name="Button-Settings" class="Button-Main-Menu" style="width: 100%; height: 30%; margin-top: 5px; margin-bottom: 5px;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="Button-Quit" class="Button-Main-Menu" style="width: 100%; height: 30%; margin-top: 5px; margin-bottom: 10px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
