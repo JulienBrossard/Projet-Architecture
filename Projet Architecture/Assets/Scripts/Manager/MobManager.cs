@@ -1,3 +1,4 @@
+using Pathfinding;
 using UnityEngine;
 
 public class MobManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class MobManager : MonoBehaviour
     private bool left;
     private Vector2 randomPos;
     public static MobManager instance;
+    private int mobCount;
     
     private void Awake()
     {
@@ -18,6 +20,16 @@ public class MobManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void AddMob()
+    {
+        mobCount++;
+    }
+    
+    public void RemoveMob()
+    {
+        mobCount--;
     }
     
     public void SpawnMobToRandomPosition(Transform mob)
@@ -50,5 +62,11 @@ public class MobManager : MonoBehaviour
             randomPos = new Vector2(camera.pixelWidth, Random.Range(0, camera.pixelHeight));
             mob.position = new Vector2(camera.ScreenToWorldPoint(randomPos).x + mob.localScale.x, camera.ScreenToWorldPoint(randomPos).y);
         }
+    }
+
+    public void SpawnMob(GameObject mob, Vector3 position)
+    {
+        mob.transform.position = position;
+        mob.GetComponent<AIDestinationSetter>().target = LevelManager.instance.player;
     }
 }

@@ -11,6 +11,11 @@ public class Mob : Entity
         base.TakeDamage(damage, name);
     }
 
+    public void Start()
+    {
+        MobManager.instance.AddMob();
+    }
+
     public override void Die(string name)
     {
         base.Die(name);
@@ -18,6 +23,7 @@ public class Mob : Entity
         {
             Pooler.instance.Pop(mobdata.collectiblesPrefab[Random.Range(0, mobdata.collectiblesPrefab.Length)].name).transform.position = transform.position;
         }
+        MobManager.instance.RemoveMob();
         Pooler.instance.DePop(name.Replace("(Clone)", String.Empty), gameObject);
     }
 }

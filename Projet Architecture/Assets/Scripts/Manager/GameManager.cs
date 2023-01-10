@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
         mapSpawners = currentMap.GetMapSpawners();
     }
 
-    public void ActivateSpawners(int numberToSpawn)
+    /*public void ActivateSpawners(int numberToSpawn)
     {
         foreach (var spawner in mapSpawners)
         {
             spawner.StartCoroutine(spawner.SpawnEnemies(numberToSpawn));
         }
-    }
+    }*/
 }

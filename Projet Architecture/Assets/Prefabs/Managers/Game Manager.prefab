@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &117160013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 117160014}
+  - component: {fileID: 117160015}
+  m_Layer: 0
+  m_Name: Spawner Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117160014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117160013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1523054106418754289}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &117160015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117160013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f6667151457864f80a591685115a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1523054105398078974
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +61,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1523054105398078975}
-  - component: {fileID: 1523054105398078972}
+  - component: {fileID: 1583359425}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -32,7 +84,7 @@ Transform:
   m_Father: {fileID: 1523054106418754289}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1523054105398078972
+--- !u!114 &1583359425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,15 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1523054105398078974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e97f8690ec511841a33a0bedd5ba6c2, type: 3}
+  m_Script: {fileID: 11500000, guid: cd248756f3ec0a84e88b5886297b1cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - npcs:
-    - npc: {fileID: 1884161696825631968, guid: 46405aa28492f0941aaf24a712ed9736, type: 3}
-      amount: 10
-    spawnRate: 2
-    timeBetweenWaves: 10
   player: {fileID: 0}
 --- !u!1 &1523054105713487251
 GameObject:
@@ -247,6 +293,7 @@ Transform:
   - {fileID: 1523054105713487248}
   - {fileID: 1523054105984158673}
   - {fileID: 1523054105398078975}
+  - {fileID: 117160014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
