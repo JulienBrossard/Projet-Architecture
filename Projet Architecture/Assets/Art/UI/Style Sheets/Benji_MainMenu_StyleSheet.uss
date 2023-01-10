@@ -1,0 +1,57 @@
+.simple-button {
+    background-color: rgba(255, 255, 255, 0);
+    max-width: 100%;
+    max-height: 40%;
+    font-size: 44px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    background-image: url('project://database/Assets/Art/UI_tk/Normal.png?fileID=21300000&guid=3e401a442623bc94e982d0eebe90557a&type=3#Normal');
+    transition-property: scale;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+
+}
+
+.simple-button:hover {
+    background-image: url('project://database/Assets/Art/UI_tk/Selected.png?fileID=21300000&guid=6ecd8e66b81e72b4a9e649b558aa6646&type=3#Selected');
+}
+
+.simple-button:active {
+    background-image: url('project://database/Assets/Art/UI_tk/Pressed.png?fileID=21300000&guid=1961769ba0b543144aed179e290cdbb0&type=3#Pressed');
+    scale: 1.2 1.2;
+}
+
+.music-button {
+    background-color: rgba(255, 255, 255, 0);
+    max-width: 100%;
+    max-height: 15%;
+    font-size: 44px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    background-image: url('project://database/Assets/Art/UI_tk/Normal.png?fileID=21300000&guid=3e401a442623bc94e982d0eebe90557a&type=3#Normal');
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.music-button:hover {
+    background-image: url('project://database/Assets/Art/UI_tk/Selected.png?fileID=21300000&guid=6ecd8e66b81e72b4a9e649b558aa6646&type=3#Selected');
+}
+
+.music-button:active {
+    background-image: url('project://database/Assets/Art/UI_tk/Pressed.png?fileID=21300000&guid=1961769ba0b543144aed179e290cdbb0&type=3#Pressed');
+    scale: 1.2 1.2;
