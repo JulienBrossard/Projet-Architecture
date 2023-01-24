@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="81dbf7b1-224d-4c71-ae05-5cffc2ab24bc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet Architecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet Architecture/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene Julien.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene Julien.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/LevelManager.cs" afterDir="false" />
@@ -17,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Guns/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Guns/Bullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+>>>>>>> Julien
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +28,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< HEAD
+    <setting file="file://$PROJECT_DIR$/Assets/AXD_UI/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+=======
     <setting file="file://$PROJECT_DIR$/../../OrigamiGame/Assets/_Scripts/LevelGeneration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../OrigamiGame/Assets/_Scripts/LevelManager.cs" root0="SKIP_HIGHLIGHTING" />
+>>>>>>> Julien
     <setting file="file://$PROJECT_DIR$/Assets/NavMeshPlus-master/NavMeshComponents/Scripts/NavMeshSurface2d.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectibles/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collectibles/DamageCollectible.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,6 +64,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
@@ -68,8 +89,9 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> Julien
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
@@ -111,8 +133,12 @@
       <workItem from="1669633221465" duration="14589000" />
       <workItem from="1669677054289" duration="3800000" />
       <workItem from="1669715467629" duration="1800000" />
+<<<<<<< HEAD
+      <workItem from="1673344272182" duration="3431000" />
+=======
       <workItem from="1669978826142" duration="796000" />
       <workItem from="1673357759273" duration="4884000" />
+>>>>>>> Julien
     </task>
     <servers />
   </component>
