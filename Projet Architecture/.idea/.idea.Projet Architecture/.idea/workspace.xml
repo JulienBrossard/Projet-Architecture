@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81dbf7b1-224d-4c71-ae05-5cffc2ab24bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Projet Architecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Projet Architecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AXD_UI/GameUI.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AXD_UI/GameUI.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AXD_UI/MainMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AXD_UI/MainMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AXD_UI/MainMenu.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AXD_UI/MainMenu.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AXD_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AXD_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/PanelSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Toolkit/PanelSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="81dbf7b1-224d-4c71-ae05-5cffc2ab24bc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +94,7 @@
       <workItem from="1669677054289" duration="3800000" />
       <workItem from="1669715467629" duration="1800000" />
       <workItem from="1673344272182" duration="3431000" />
-      <workItem from="1674555143819" duration="5747000" />
+      <workItem from="1674555143819" duration="6565000" />
     </task>
     <servers />
   </component>
