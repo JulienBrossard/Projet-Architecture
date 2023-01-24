@@ -10,8 +10,6 @@ public class JukeboxManager : MonoBehaviour
     [SerializeField] private UIDocument document;
     [SerializeField] private Camera mainCam; // PLACEHOLDER for sound manager
 
-    [SerializeField] private VisualTreeAsset UXMLTree;
-
     private const string m_ButtonPrefix = "Button_Music";
 
     [Space, SerializeField] private AudioClip[] clips = new AudioClip[3];
