@@ -22,7 +22,7 @@ public class Entity : MonoBehaviour
         }
     }
     
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         currentStats.currentHealth -= damage;
         if ( currentStats.currentHealth<0)
