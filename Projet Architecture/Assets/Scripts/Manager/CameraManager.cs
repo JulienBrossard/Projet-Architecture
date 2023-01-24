@@ -22,12 +22,12 @@ public class CameraManager : MonoBehaviour
     }
 
 
-    public void CameraVignetteEffectOnHurt()
+    public void CameraVignetteEffectOnHurt(float time)
     {
         if (vignette.active == false)
         {
             vignette.active = true;
-            DOTween.To(() => vignette.intensity.value, x => vignette.intensity.value = x, 0.3f, 0.5f).SetInverted().OnComplete(() => vignette.active = false);
+            DOTween.To(() => vignette.intensity.value, x => vignette.intensity.value = x, 0.3f, time/4).SetInverted().OnComplete(() => vignette.active = false);
         }
     }
     

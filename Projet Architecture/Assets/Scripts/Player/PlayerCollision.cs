@@ -13,7 +13,7 @@ public class PlayerCollision : MonoBehaviour
             if (col.gameObject.GetComponent<Mob>() != default)
             {
                 IEnumerator enumerator =
-                    PlayerManager.instance.TakeMultipleDamage(col.gameObject.GetComponent<Mob>().entityData.damage, 10);
+                    PlayerManager.instance.TakeMultipleDamage(col.gameObject.GetComponent<Mob>().entityData.damage, 1);
                 damageDictionary.Add(col.gameObject, enumerator);
                 StartCoroutine(enumerator);
             }
@@ -29,8 +29,19 @@ public class PlayerCollision : MonoBehaviour
     {
         if (other.collider.CompareTag("Enemy") && damageDictionary.ContainsKey(other.gameObject))
         {
-            StopCoroutine(damageDictionary[other.gameObject]);
-            damageDictionary.Remove(other.gameObject);
+           //PlayerManager.instance.StopDamage(other.gameObject);
+           //StopCoroutine(damageDictionary[other.gameObject]);
+           //damageDictionary.Remove(other.gameObject);
+           StopDamage(other.gameObject);
+           //PlayerManager.instance.StopDamage(other.gameObject);
         }
     }
+
+    public void StopDamage(GameObject enemy)
+    {
+        StopCoroutine(damageDictionary[enemy]);
+        damageDictionary.Remove(enemy);
+    }
+    
+    
 }

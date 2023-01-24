@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Player Data
   m_EditorClassIdentifier: 
   speed: 5
+  maxSpeed: 10
   acceleration: 10
   deceleration: 10
   dashForce: 20

@@ -2,14 +2,16 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerManager : Entity
 {
     public static PlayerManager instance;
     public PlayerCollision playerCollision;
     public PlayerMovement playerMovement;
-    public PlayerShoot PlayerShoot;
+    public PlayerShoot playerShoot;
 
     private void Awake()
     {
@@ -21,6 +23,15 @@ public class PlayerManager : Entity
         {
             Destroy(gameObject);
         }
+    }
+
+    void Start()
+    {
+        UIManager.instance.speedBonus.text = Math.Round(GetPlayerData().speed,2).ToString();
+        UIManager.instance.fireRateBonus.text = Math.Round(GetGunData().fireRate,2).ToString();
+        UIManager.instance.damageBonus.text = GetGunData().bulletDamage.ToString();
+        UIManager.instance.playerHealth.text = entityData.health.ToString();
+        currentStats.currentHealth = entityData.health;
     }
     
     
@@ -34,7 +45,7 @@ public class PlayerManager : Entity
     {
         while (true)
         {
-            TakeDamage(damage);
+            TakeDamage(damage, time);
             yield return new WaitForSeconds(time);
         }
     }
@@ -46,12 +57,19 @@ public class PlayerManager : Entity
     
     public GunData GetGunData()
     {
-        return PlayerShoot.gun.gunCurrentStats.gunData;
+        return playerShoot.gun.gunCurrentStats.gunData;
     }
 
-    public override void TakeDamage(float damage)
+    public void TakeDamage(float damage, float time)
     {
-        CameraManager.instance.CameraVignetteEffectOnHurt();
-        base.TakeDamage(damage);
+        CameraManager.instance.CameraVignetteEffectOnHurt(time);
+        TakeDamage(damage);
+        UIManager.instance.playerHealth.text = currentStats.currentHealth.ToString();
+    }
+
+    public void StopDamage(GameObject enemy)
+    {
+        StopCoroutine(playerCollision.damageDictionary[enemy]);
+        playerCollision.damageDictionary.Remove(enemy);
     }
 }

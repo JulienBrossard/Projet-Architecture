@@ -5,6 +5,7 @@ public class PlayerData : ScriptableObject
 {
     [Header("Speed")]
     public float speed;
+    public float maxSpeed;
     public float acceleration;
     public float deceleration;
     [Header("Dash")]
