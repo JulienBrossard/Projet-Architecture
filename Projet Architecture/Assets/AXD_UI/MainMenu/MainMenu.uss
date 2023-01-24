@@ -1,0 +1,17 @@
+.button {
+    min-width: 200px;
+    min-height: 60px;
+    font-size: 36px;
+    width: 30%;
+    height: 20%;
+    -unity-font-style: normal;
+}
+
+.title {
+    font-size: 90px;
+    -unity-text-align: middle-center;
+    color: rgb(255, 255, 255);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgba(0, 0, 0, 255);
+}
