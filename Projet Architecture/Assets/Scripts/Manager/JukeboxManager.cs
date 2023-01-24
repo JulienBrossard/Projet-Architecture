@@ -10,13 +10,13 @@ public class JukeboxManager : MonoBehaviour
     [SerializeField] private UIDocument document;
     [SerializeField] private Camera mainCam; // PLACEHOLDER for sound manager
 
-    [SerializeField] private VisualTreeAsset m_UXMLTree;
+    [SerializeField] private VisualTreeAsset UXMLTree;
 
     private const string m_ButtonPrefix = "Button_Music";
 
     [Space, SerializeField] private AudioClip[] clips = new AudioClip[3];
     private List<Button> musicButtons = new List<Button>();
-    private bool show;
+    private bool show; // PLACEHOLDER
     private AudioSource mainSource;
     VisualElement subRoot;    
 
@@ -34,15 +34,25 @@ public class JukeboxManager : MonoBehaviour
 
     private void Update()
     {
-        // remplacer par player trigger enter
+        // PLACEHOLDER: remplacer par player trigger enter
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            show = !show; 
-            Display(); 
+            show = !show;
+            Display(show);
         }
     }
 
-    private void Display()
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Display(true); 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Display(false);         
+    }
+
+    private void Display(bool show)
     {
         // TODO : tween show/hide animation + sfx
         document.enabled = show;
@@ -63,9 +73,11 @@ public class JukeboxManager : MonoBehaviour
         // TODO : tween set new animation + sfx
 
         Button button = evt.currentTarget as Button;
-        int buttonNumber = Int32.Parse(button.name.Substring(m_ButtonPrefix.Length));
+        int buttonNumber = int.Parse(button.name.Substring(m_ButtonPrefix.Length));
 
         mainSource.clip = clips[buttonNumber];
         mainSource.Play();
+
+        // feedbacks pour tout : visuel ET sonore
     }
 }
