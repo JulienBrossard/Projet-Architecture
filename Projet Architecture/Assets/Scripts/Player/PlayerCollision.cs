@@ -10,10 +10,13 @@ public class PlayerCollision : MonoBehaviour
     {
         if (col.collider.CompareTag("Enemy"))
         {
-            IEnumerator enumerator =
-                PlayerManager.instance.TakeMultipleDamage(col.gameObject.GetComponent<Mob>().entityData.damage, 10);
-            damageDictionary.Add(col.gameObject, enumerator);
-            StartCoroutine(enumerator);
+            if (col.gameObject.GetComponent<Mob>() != default)
+            {
+                IEnumerator enumerator =
+                    PlayerManager.instance.TakeMultipleDamage(col.gameObject.GetComponent<Mob>().entityData.damage, 10);
+                damageDictionary.Add(col.gameObject, enumerator);
+                StartCoroutine(enumerator);
+            }
         }
         
         else if (col.collider.GetComponent<ICollectable>() != null)
