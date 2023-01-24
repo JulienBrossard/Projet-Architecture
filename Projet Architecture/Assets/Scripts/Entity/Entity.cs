@@ -34,12 +34,9 @@ public class Entity : MonoBehaviour
 
     public virtual void Die(string name)
     {
-        if (PlayerManager.instance.playerCollision.damageDictionary.ContainsKey(gameObject))
-        {
-            StopCoroutine(PlayerManager.instance.playerCollision.damageDictionary[gameObject]);
-            PlayerManager.instance.playerCollision.damageDictionary.Remove(gameObject);
-        }
+        
     }
+    
     public virtual void Die()
     {
         
