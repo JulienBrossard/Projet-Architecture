@@ -40,6 +40,7 @@ public class PlayerManager : Entity
     {
         Debug.Log("Game Over");
         GameManager.Finish(false);
+        currentStats.currentHealth = 0;
     }
     
     public IEnumerator TakeMultipleDamage(float damage, int time)
