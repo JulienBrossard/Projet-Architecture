@@ -25,7 +25,7 @@ public class Entity : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         currentStats.currentHealth -= damage;
-        if ( currentStats.currentHealth<0)
+        if ( currentStats.currentHealth<=0)
         {
             currentStats.currentHealth = entityData.health;
             Die();

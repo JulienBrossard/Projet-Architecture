@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     
     public PlayerInputs playerInputs;
 
+    public MenuInputs menuInputs;
+
     void Awake()
     {
         if (instance == null)
@@ -20,5 +22,8 @@ public class InputManager : MonoBehaviour
 
         playerInputs = new PlayerInputs();
         playerInputs.Enable();
+
+        menuInputs = new MenuInputs();
+        menuInputs.Enable();
     }
 }
