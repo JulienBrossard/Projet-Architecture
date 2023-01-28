@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] UIDocument uiDocument;
     public static UIManager instance;
-    public Label speedBonus, damageBonus, fireRateBonus, playerHealth;
+    public Label speedBonus, damageBonus, fireRateBonus, playerHealth, spawnerCount, result;
     private VisualElement root;
     public VisualElement reload;
 
@@ -28,6 +28,8 @@ public class UIManager : MonoBehaviour
         damageBonus = root.Q<Label>("damage");
         playerHealth = root.Q<Label>("health");
         reload = root.Q<VisualElement>("reload");
+        spawnerCount = root.Q<Label>("spawnerCount");
+        result = root.Q<Label>("result");
     }
     
     

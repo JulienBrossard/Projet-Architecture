@@ -39,6 +39,7 @@ public class PlayerManager : Entity
     public override void Die()
     {
         Debug.Log("Game Over");
+        GameManager.Finish(false);
     }
     
     public IEnumerator TakeMultipleDamage(float damage, int time)

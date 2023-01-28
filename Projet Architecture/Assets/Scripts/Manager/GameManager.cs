@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private List<EnemySpawner> mapSpawners;
-    [SerializeField] private Map currentMap;
-
-    public void InitialiseMap()
+    public static void Finish(bool result)
     {
-        mapSpawners = currentMap.GetMapSpawners();
-    }
-
-    /*public void ActivateSpawners(int numberToSpawn)
-    {
-        foreach (var spawner in mapSpawners)
+        UIManager.instance.result.visible = true;
+        if (result)
         {
-            spawner.StartCoroutine(spawner.SpawnEnemies(numberToSpawn));
+            UIManager.instance.result.text = "You win";
         }
-    }*/
+        else
+        {
+            UIManager.instance.result.text = "You loose";
+        }
+        PauseManager.instance.End();
+    }
 }

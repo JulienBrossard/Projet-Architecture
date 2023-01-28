@@ -14,8 +14,19 @@
             <ui:Label text="0" display-tooltip-when-elided="true" name="damage" class="text" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="health">
+    <ui:VisualElement name="health" style="flex-direction: row;">
+        <ui:Label text="Health : " display-tooltip-when-elided="true" name="healthLabel" class="text" />
         <ui:Label text="0" display-tooltip-when-elided="true" name="health" class="text" />
     </ui:VisualElement>
-    <ui:VisualElement name="reload" style="position: absolute; background-image: url(&apos;project://database/Assets/Art/Images/UI/reload.png?fileID=2800000&amp;guid=cbb14ad1016ae2f4e8fb9c0ecc6f1e53&amp;type=3#reload&apos;); width: 3%; height: 5%; top: 974px; left: 1768px; transition-property: rotate; transition-duration: 5s; visibility: hidden;" />
+    <ui:VisualElement name="spawners" style="flex-direction: row;">
+        <ui:Label text="Spawner count : " display-tooltip-when-elided="true" name="spawnersLabel" class="text" />
+        <ui:Label text="0" display-tooltip-when-elided="true" name="spawnerCount" class="text" />
+    </ui:VisualElement>
+    <ui:VisualElement name="reload" style="position: absolute; background-image: url(&apos;project://database/Assets/Art/Images/UI/reload.png?fileID=2800000&amp;guid=cbb14ad1016ae2f4e8fb9c0ecc6f1e53&amp;type=3#reload&apos;); width: 3%; height: 5%; top: 610px; left: 1118px; transition-property: rotate; transition-duration: 5s; visibility: hidden;" />
+    <ui:VisualElement name="menu" style="position: absolute; scale: 3 3; width: auto; height: auto; top: 190px; left: 568px; visibility: hidden;">
+        <ui:Label text="You win" display-tooltip-when-elided="true" name="result" style="-unity-text-align: upper-center; visibility: hidden;" />
+        <ui:Button text="Continue" display-tooltip-when-elided="true" name="continue" />
+        <ui:Button text="Restart" display-tooltip-when-elided="true" name="restart" />
+        <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="mainMenu" />
+    </ui:VisualElement>
 </ui:UXML>
