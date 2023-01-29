@@ -10,6 +10,7 @@ public class JukeboxManager : MonoBehaviour
     [SerializeField] private UIDocument document;
     [SerializeField] private AudioSource mainSource;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject music;
 
     private const string m_ButtonPrefix = "Button_Music";
 
@@ -23,7 +24,7 @@ public class JukeboxManager : MonoBehaviour
         subRoot = document.rootVisualElement.Q<VisualElement>("JukeBox_Options");
         musicButtons = subRoot.Children().ToList().ConvertAll(x => x.Q<Button>());
         SetupButtonHandler();
-        DontDestroyOnLoad(this.transform.root.gameObject);
+        DontDestroyOnLoad(music);
 
         if (SceneManager.GetActiveScene().name != "MainMenu")
         {
@@ -31,6 +32,15 @@ public class JukeboxManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Debug.Log("start");
+    }
+
+    private void OnEnable()
+    {
+        Debug.Log("enable");
+    }
 
     public void Show()
     {
@@ -56,7 +66,7 @@ public class JukeboxManager : MonoBehaviour
         Button button = evt.currentTarget as Button;
         int buttonNumber = int.Parse(button.name.Substring(m_ButtonPrefix.Length));
 
-        //Debug.Log("button number: " + buttonNumber);
+        Debug.Log("button number: " + buttonNumber);
         mainSource.clip = clips[buttonNumber];
         mainSource.Play();
     }

@@ -23,7 +23,7 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
-        tmp.text = $"Current Credits: {shopData.Credits}";
+        tmp.text = $" : {shopData.Credits}";
     }
 
     public void UpdatePlayerCredits(int unlockedItemCost)

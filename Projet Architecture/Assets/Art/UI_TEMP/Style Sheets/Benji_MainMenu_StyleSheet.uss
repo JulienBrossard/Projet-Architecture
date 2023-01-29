@@ -7,7 +7,7 @@
     border-right-width: 3px;
     border-top-width: 3px;
     border-bottom-width: 3px;
-    background-image: url('project://database/Assets/Art/UI_tk/Normal.png?fileID=21300000&guid=3e401a442623bc94e982d0eebe90557a&type=3#Normal');
+    background-image: url('project://database/Assets/Art/UI_tk_TEMP/Normal.png?fileID=21300000&guid=3e401a442623bc94e982d0eebe90557a&type=3#Normal');
     transition-property: scale;
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
@@ -16,15 +16,14 @@
     margin-right: 6px;
     margin-top: 6px;
     margin-bottom: 6px;
-
 }
 
 .simple-button:hover {
-    background-image: url('project://database/Assets/Art/UI_tk/Selected.png?fileID=21300000&guid=6ecd8e66b81e72b4a9e649b558aa6646&type=3#Selected');
+    background-image: url('project://database/Assets/Art/UI_tk_TEMP/Selected.png?fileID=21300000&guid=6ecd8e66b81e72b4a9e649b558aa6646&type=3#Selected');
 }
 
 .simple-button:active {
-    background-image: url('project://database/Assets/Art/UI_tk/Pressed.png?fileID=21300000&guid=1961769ba0b543144aed179e290cdbb0&type=3#Pressed');
+    background-image: url('project://database/Assets/Art/UI_tk_TEMP/Pressed.png?fileID=21300000&guid=1961769ba0b543144aed179e290cdbb0&type=3#Pressed');
     scale: 1.2 1.2;
 }
 
@@ -37,21 +36,22 @@
     border-right-width: 3px;
     border-top-width: 3px;
     border-bottom-width: 3px;
-    background-image: url('project://database/Assets/Art/UI_tk/Normal.png?fileID=21300000&guid=3e401a442623bc94e982d0eebe90557a&type=3#Normal');
-    width: 100%;
-    height: 100%;
+    background-image: url('project://database/Assets/Art/UI_tk_TEMP/Normal.png?fileID=21300000&guid=3e401a442623bc94e982d0eebe90557a&type=3#Normal');
+    width: 25%;
+    height: 10%;
     justify-content: center;
     align-items: center;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .music-button:hover {
-    background-image: url('project://database/Assets/Art/UI_tk/Selected.png?fileID=21300000&guid=6ecd8e66b81e72b4a9e649b558aa6646&type=3#Selected');
+    background-image: url('project://database/Assets/Art/UI_tk_TEMP/Selected.png?fileID=21300000&guid=6ecd8e66b81e72b4a9e649b558aa6646&type=3#Selected');
 }
 
 .music-button:active {
-    background-image: url('project://database/Assets/Art/UI_tk/Pressed.png?fileID=21300000&guid=1961769ba0b543144aed179e290cdbb0&type=3#Pressed');
+    background-image: url('project://database/Assets/Art/UI_tk_TEMP/Pressed.png?fileID=21300000&guid=1961769ba0b543144aed179e290cdbb0&type=3#Pressed');
     scale: 1.2 1.2;
+}

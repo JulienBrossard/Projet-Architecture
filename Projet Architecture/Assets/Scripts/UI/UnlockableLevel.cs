@@ -19,7 +19,7 @@ public class UnlockableLevel : MonoBehaviour
     private void Init()
     {
         levelName.text = shopItem.itemName;
-        levelCost.text = $"Cost: {shopItem.itemCost}";
+        levelCost.text = $" : {shopItem.itemCost}";
         levelImage.sprite = shopItem.itemSprite;
 
         if (shopItem.name != "Level1")
