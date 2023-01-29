@@ -10,7 +10,6 @@ public class ShopDataSO : ScriptableObject
 
     void OnValidate()
     {
-        Debug.Log("on validate");
         Credits = debugStartingCredits;
     }
 }
