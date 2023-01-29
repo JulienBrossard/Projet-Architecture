@@ -7,5 +7,6 @@ public class ShopItemSO : ScriptableObject
     public string itemName;
     public int itemCost;
     public Sprite itemSprite;
-    public bool isUnlocked;   
+    public bool isUnlocked;
+    public string unlockableScene;
 }

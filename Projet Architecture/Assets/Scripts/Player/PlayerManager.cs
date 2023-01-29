@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 
 public class PlayerManager : Entity
 {
+    [SerializeField] private ShopDataSO shopData;
     public static PlayerManager instance;
     public PlayerCollision playerCollision;
     public PlayerMovement playerMovement;
@@ -27,14 +28,14 @@ public class PlayerManager : Entity
 
     void Start()
     {
-        UIManager.instance.speedBonus.text = Math.Round(GetPlayerData().speed,2).ToString();
-        UIManager.instance.fireRateBonus.text = Math.Round(GetGunData().fireRate,2).ToString();
+        UIManager.instance.speedBonus.text = Math.Round(GetPlayerData().speed, 2).ToString();
+        UIManager.instance.fireRateBonus.text = Math.Round(GetGunData().fireRate, 2).ToString();
         UIManager.instance.damageBonus.text = GetGunData().bulletDamage.ToString();
         UIManager.instance.playerHealth.text = entityData.health.ToString();
         currentStats.currentHealth = entityData.health;
     }
-    
-    
+
+
 
     public override void Die()
     {
@@ -42,7 +43,7 @@ public class PlayerManager : Entity
         GameManager.Finish(false);
         currentStats.currentHealth = 0;
     }
-    
+
     public IEnumerator TakeMultipleDamage(float damage, int time)
     {
         while (true)
@@ -56,7 +57,7 @@ public class PlayerManager : Entity
     {
         return playerMovement.currentStats.playerData;
     }
-    
+
     public GunData GetGunData()
     {
         return playerShoot.gun.gunCurrentStats.gunData;
@@ -73,5 +74,10 @@ public class PlayerManager : Entity
     {
         StopCoroutine(playerCollision.damageDictionary[enemy]);
         playerCollision.damageDictionary.Remove(enemy);
+    }
+
+    public void UpdateCredits(int amount)
+    {
+        shopData.Credits += amount;
     }
 }

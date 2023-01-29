@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
             if (col.gameObject.CompareTag("Enemy"))
             {
                 col.gameObject.GetComponent<Entity>().TakeDamage(gunData.bulletDamage, col.gameObject.name);
+                PlayerManager.instance.UpdateCredits(10);
             }
             DePop();
         }

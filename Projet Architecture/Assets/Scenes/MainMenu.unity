@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3824277917785622039, guid: 61d818be5f756ad488f341f84d253fc8, type: 3}
       propertyPath: playSceneName
-      value: Scene Test Julien
+      value: Hub
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d818be5f756ad488f341f84d253fc8, type: 3}

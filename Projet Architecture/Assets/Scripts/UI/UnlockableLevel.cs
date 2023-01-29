@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UnlockableLevel : MonoBehaviour
 {
@@ -8,10 +9,11 @@ public class UnlockableLevel : MonoBehaviour
     [SerializeField] private TMP_Text levelName;
     [SerializeField] private TMP_Text levelCost;
     [SerializeField] private Image levelImage;
+    [SerializeField] private GameObject unlockButton;
 
     private void Start()
     {
-        Init(); 
+        Init();
     }
 
     private void Init()
@@ -19,38 +21,24 @@ public class UnlockableLevel : MonoBehaviour
         levelName.text = shopItem.itemName;
         levelCost.text = $"Cost: {shopItem.itemCost}";
         levelImage.sprite = shopItem.itemSprite;
-        levelImage.color = new Color(1.0f, 1.0f, 1.0f, 0.35f);
+
+        if (shopItem.name != "Level1")
+        {
+            levelImage.color = new Color(1.0f, 1.0f, 1.0f, 0.35f);
+        }
     }
 
     public void TryUnlockItem()
     {
-        if (ShopManager.Instance.PlayerCoinsAmount >= shopItem.itemCost)
-        {
-            OnUnlock();
-
-            // AudiovisualFeedback.DoFeedback(); 
-        }
+        ShopManager.Instance.TryUnlock(shopItem, levelImage, unlockButton);
     }
+
 
     public void TryLoadLevel()
     {
         if (shopItem.isUnlocked)
         {
-            // load proper scene scene
+            SceneManager.LoadScene(shopItem.unlockableScene);
         }
-    }
-
-
-    // turn into an interface for various types of shop items
-    private void OnUnlock()
-    {
-        shopItem.isUnlocked = true;
-        ShopManager.Instance.UpdatePlayerCoins(shopItem.itemCost);
-        levelImage.color = Color.white;
-
-        // AudiovisualFeedback.DoFeedback();
-
-        // new level is now available
-        // update shop data & player data
     }
 }

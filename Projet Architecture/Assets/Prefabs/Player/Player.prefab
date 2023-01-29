@@ -240,6 +240,7 @@ MonoBehaviour:
   currentStats:
     currentHealth: 0
   entityData: {fileID: 11400000, guid: dcffc2ca524ab2b44ab424007310262e, type: 2}
+  shopData: {fileID: 11400000, guid: 36fc5cbecb3a21c4c86c2bf4be12aafb, type: 2}
   playerCollision: {fileID: 2059707925}
   playerMovement: {fileID: 4658423719987838015}
   playerShoot: {fileID: 4658423719987838012}

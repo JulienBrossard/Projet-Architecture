@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level3
   m_EditorClassIdentifier: 
   itemName: Jungle
-  itemCost: 60
+  itemCost: 1500
   itemSprite: {fileID: 1990105789, guid: b7e825a7f40a3ba43adedddb727c4dda, type: 3}
   isUnlocked: 0
+  unlockableScene: Level3
