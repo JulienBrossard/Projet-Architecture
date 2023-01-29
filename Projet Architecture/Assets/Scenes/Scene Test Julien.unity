@@ -1405,7 +1405,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 194649047584105143, guid: c68f756ce170afb40a7e22ce3d2b7f89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2721985893427285096, guid: c68f756ce170afb40a7e22ce3d2b7f89, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745877620710188390, guid: c68f756ce170afb40a7e22ce3d2b7f89, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2069,6 +2077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4658423719987837987, guid: 5136b3a78ad20904187a95da0db687ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4658423719987838012, guid: 5136b3a78ad20904187a95da0db687ed, type: 3}
       propertyPath: camera
       value: 
@@ -2339,6 +2351,10 @@ PrefabInstance:
     - target: {fileID: 9065850837705552804, guid: 85bac9af17bbd9842af305ce6d6e687e, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065850837705552804, guid: 85bac9af17bbd9842af305ce6d6e687e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9065850838424800394, guid: 85bac9af17bbd9842af305ce6d6e687e, type: 3}
       propertyPath: m_IsActive

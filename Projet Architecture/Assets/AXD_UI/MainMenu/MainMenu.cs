@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]  UIDocument uiDoc;
+    [SerializeField] UIDocument uiDoc;
     private Button playButton;
     private Button quitButton;
     [SerializeField] private string playSceneName;
@@ -22,13 +22,11 @@ public class MainMenu : MonoBehaviour
 
     private void Play()
     {
-        Debug.Log("Play");
         SceneManager.LoadScene(playSceneName);
     }
 
     private void Quit()
     {
-        Debug.Log("Quit");
         Application.Quit();
     }
-} 
+}
