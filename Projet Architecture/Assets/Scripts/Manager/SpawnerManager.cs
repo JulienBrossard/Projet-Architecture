@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
 {
-    int spawnCount = 0;
+    int spawnerCount = 0;
     public EnemySpawner[] spawners;
     
     public static SpawnerManager instance;
@@ -19,11 +19,17 @@ public class SpawnerManager : MonoBehaviour
     
     public void AddSpawner()
     {
-        spawnCount++;
+        spawnerCount++;
+        UIManager.instance.spawnerCount.text = spawnerCount.ToString();
     }
 
     public void RemoveSpawner()
     {
-        spawnCount--;
+        spawnerCount--;
+        UIManager.instance.spawnerCount.text = spawnerCount.ToString();
+        if (spawnerCount <= 0)
+        {
+            GameManager.Finish(true);
+        }
     }
 }

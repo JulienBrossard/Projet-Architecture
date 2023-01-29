@@ -19,6 +19,10 @@ public class Mob : Entity
     public override void Die(string name)
     {
         base.Die(name);
+        if (PlayerManager.instance.playerCollision.damageDictionary.ContainsKey(gameObject))
+        {
+            PlayerManager.instance.playerCollision.StopDamage(gameObject);
+        }
         if (mobdata.collectibleSpawnChance != 0 && Math.Round(Random.Range(0f, 1f)) <= mobdata.collectibleSpawnChance)
         {
             Pooler.instance.Pop(mobdata.collectiblesPrefab[Random.Range(0, mobdata.collectiblesPrefab.Length)].name).transform.position = transform.position;

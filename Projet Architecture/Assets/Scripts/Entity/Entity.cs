@@ -22,10 +22,10 @@ public class Entity : MonoBehaviour
         }
     }
     
-    public void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage)
     {
         currentStats.currentHealth -= damage;
-        if ( currentStats.currentHealth<0)
+        if ( currentStats.currentHealth<=0)
         {
             currentStats.currentHealth = entityData.health;
             Die();
@@ -34,12 +34,9 @@ public class Entity : MonoBehaviour
 
     public virtual void Die(string name)
     {
-        if (PlayerManager.instance.playerCollision.damageDictionary.ContainsKey(gameObject))
-        {
-            StopCoroutine(PlayerManager.instance.playerCollision.damageDictionary[gameObject]);
-            PlayerManager.instance.playerCollision.damageDictionary.Remove(gameObject);
-        }
+        
     }
+    
     public virtual void Die()
     {
         

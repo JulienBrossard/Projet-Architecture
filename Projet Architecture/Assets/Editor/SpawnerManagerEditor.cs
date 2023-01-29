@@ -10,8 +10,11 @@ public class SpawnerManagerEditor : Editor
         SpawnerManager spawnerManager = (SpawnerManager)target;
         foreach (var spawner in spawnerManager.spawners)
         {
-            Handles.color = Color.red;
-            Handles.DrawWireDisc(spawner.transform.position, Vector3.forward, spawner.spawnerData.spawnRadius);
+            if (spawner != default)
+            {
+                Handles.color = Color.red;
+                Handles.DrawWireDisc(spawner.transform.position, Vector3.forward, spawner.spawnerData.spawnRadius);
+            }
         }
     }
 }

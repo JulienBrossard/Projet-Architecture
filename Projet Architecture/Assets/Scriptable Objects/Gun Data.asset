@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletName: Bullet
   fireRate: 0.2
+  minFireRate: 0.05
   bulletForce: 10
   bulletLife: 2
   bulletDamage: 10
+  maxDamage: 50
   reloadTime: 1
   maxAmmo: 15

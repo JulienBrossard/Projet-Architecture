@@ -15,11 +15,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public PlayerMovementStats currentStats; // Current Stats
     
     
-    void Start()
+    void Awake()
     {
         currentStats = new PlayerMovementStats(); // Init stats
-        playerInputs = InputManager.instance.playerInputs; // Get player inputs
         currentStats.playerData = Instantiate(playerdata);
+    }
+
+    private void Start()
+    {
+        playerInputs = InputManager.instance.playerInputs; // Get player inputs
     }
 
     void Update()

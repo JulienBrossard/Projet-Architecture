@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameUI.uss?fileID=7433441132597879392&amp;guid=cee3e2554cbfdcc4ca69eb6edfe54d28&amp;type=3#GameUI" />
+    <ui:VisualElement name="bonus" style="width: 31%;">
+        <ui:VisualElement name="speedLabels" style="background-color: rgba(255, 255, 255, 0); flex-direction: row; flex-grow: 0; flex-wrap: wrap;">
+            <ui:Label text="Speed :" display-tooltip-when-elided="true" name="speedLabel" class="text" style="flex-wrap: wrap;" />
+            <ui:Label text="0" display-tooltip-when-elided="true" name="speed" class="text" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fireRateLabels" style="background-color: rgba(255, 255, 255, 0); flex-direction: row; flex-wrap: wrap;">
+            <ui:Label text="Fire rate :" display-tooltip-when-elided="true" name="fireRateLabel" class="text" style="flex-grow: 0; width: auto; flex-wrap: wrap;" />
+            <ui:Label text="0" display-tooltip-when-elided="true" name="fireRate" class="text" />
+        </ui:VisualElement>
+        <ui:VisualElement name="damageLabels" style="background-color: rgba(255, 255, 255, 0); flex-direction: row; flex-wrap: wrap;">
+            <ui:Label text="Damage :" display-tooltip-when-elided="true" name="damageLabel" class="text" style="flex-wrap: wrap;" />
+            <ui:Label text="0" display-tooltip-when-elided="true" name="damage" class="text" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="health" style="flex-direction: row;">
+        <ui:Label text="Health : " display-tooltip-when-elided="true" name="healthLabel" class="text" />
+        <ui:Label text="0" display-tooltip-when-elided="true" name="health" class="text" />
+    </ui:VisualElement>
+    <ui:VisualElement name="spawners" style="flex-direction: row;">
+        <ui:Label text="Spawner count : " display-tooltip-when-elided="true" name="spawnersLabel" class="text" />
+        <ui:Label text="0" display-tooltip-when-elided="true" name="spawnerCount" class="text" />
+    </ui:VisualElement>
+    <ui:VisualElement name="reload" style="position: absolute; background-image: url(&apos;project://database/Assets/Art/Images/UI/reload.png?fileID=2800000&amp;guid=cbb14ad1016ae2f4e8fb9c0ecc6f1e53&amp;type=3#reload&apos;); width: 3%; height: 5%; top: 610px; left: 1118px; transition-property: rotate; transition-duration: 5s; visibility: hidden;" />
+    <ui:VisualElement name="menu" style="position: absolute; scale: 3 3; width: auto; height: auto; top: 190px; left: 568px; visibility: hidden;">
+        <ui:Label text="You win" display-tooltip-when-elided="true" name="result" style="-unity-text-align: upper-center; visibility: hidden;" />
+        <ui:Button text="Continue" display-tooltip-when-elided="true" name="continue" />
+        <ui:Button text="Restart" display-tooltip-when-elided="true" name="restart" />
+        <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="mainMenu" />
+    </ui:VisualElement>
+</ui:UXML>
