@@ -14,7 +14,7 @@ public class GameplayEventsManager : MonoBehaviour
     private GameplayEvent gameplayEvent;
 
     [Header("-- FOG --")]
-    [SerializeField] private List<D2FogsPE> fogs;
+    [SerializeField] private GameObject fogVFX;
 
     [Header("-- BLIZZARD --")]
     [SerializeField] private GameObject SnowVFXContainer;
@@ -43,20 +43,15 @@ public class GameplayEventsManager : MonoBehaviour
     private void Start()
     {
         SnowVFXContainer.SetActive(false);
+        fogVFX.SetActive(false);
 
-        for (int i = 0; i < fogs.Count; i++)
-        {
-            fogs[i].enabled = false;
-        }
-
-        float delay = UnityEngine.Random.Range(2, 5);
-        Debug.Log("delay: " + delay);
+        float delay = UnityEngine.Random.Range(15, 45);
         Invoke(nameof(Init), delay);
     }
 
     private void Init()
     {
-        TriggerEvent(currentBiome); // DEBUG
+        TriggerEvent(currentBiome);
     }
 
     public void TriggerEvent(Biome currentBiome)
@@ -118,11 +113,7 @@ public class GameplayEventsManager : MonoBehaviour
 
     private void TriggerFogEvent()
     {
-        for (int i = 0; i < fogs.Count; i++)
-        {
-            fogs[i].enabled = true;
-        }
-
+        fogVFX.SetActive(true);
         PlayerManager.instance.GetGunData().bulletDamage *= 0.5f;
         UIManager.instance.damageBonus.text = PlayerManager.instance.GetGunData().bulletDamage.ToString();
     }

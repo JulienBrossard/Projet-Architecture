@@ -220,6 +220,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 104157740166471886}
     m_Modifications:
+    - target: {fileID: 3402190480325524146, guid: d697a547183384d42bb62786ef62c538, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402190480325524147, guid: d697a547183384d42bb62786ef62c538, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402190480325524153, guid: d697a547183384d42bb62786ef62c538, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7984332839982946072, guid: d697a547183384d42bb62786ef62c538, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -264,14 +276,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7984332839982946073, guid: d697a547183384d42bb62786ef62c538, type: 3}
-      propertyPath: CamTransform
-      value: 
-      objectReference: {fileID: 104157740166471886}
     - target: {fileID: 7984332839982946074, guid: d697a547183384d42bb62786ef62c538, type: 3}
       propertyPath: CamTransform
       value: 
       objectReference: {fileID: 104157740166471886}
+    - target: {fileID: 7984332839982946075, guid: d697a547183384d42bb62786ef62c538, type: 3}
+      propertyPath: fogs.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7984332839982946079, guid: d697a547183384d42bb62786ef62c538, type: 3}
       propertyPath: m_Name
       value: GameplayEventsManager

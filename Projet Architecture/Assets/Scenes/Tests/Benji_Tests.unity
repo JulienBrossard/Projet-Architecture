@@ -401,9 +401,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7984332839982946073, guid: d697a547183384d42bb62786ef62c538, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984332839982946073, guid: d697a547183384d42bb62786ef62c538, type: 3}
       propertyPath: CamTransform
       value: 
       objectReference: {fileID: 6137129217610202252}
+    - target: {fileID: 7984332839982946074, guid: d697a547183384d42bb62786ef62c538, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7984332839982946074, guid: d697a547183384d42bb62786ef62c538, type: 3}
       propertyPath: CamTransform
       value: 
@@ -414,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7984332839982946079, guid: d697a547183384d42bb62786ef62c538, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d697a547183384d42bb62786ef62c538, type: 3}
