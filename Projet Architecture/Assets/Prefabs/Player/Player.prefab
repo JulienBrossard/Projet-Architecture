@@ -60,9 +60,9 @@ GameObject:
   - component: {fileID: 4658423719987838014}
   - component: {fileID: 4658423719987837985}
   - component: {fileID: 4658423719987837984}
+  - component: {fileID: 2393327784739581405}
   - component: {fileID: 4658423719987838015}
   - component: {fileID: 4658423719987838012}
-  - component: {fileID: 2059707927}
   - component: {fileID: 2059707925}
   - component: {fileID: 2059707926}
   m_Layer: 8
@@ -128,7 +128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1746727998, guid: ecfec2772b9b737478b2a2fe644b6b09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,6 +161,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &2393327784739581405
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658423719987837987}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.41428572
 --- !u!114 &4658423719987838015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,22 +213,6 @@ MonoBehaviour:
   camera: {fileID: 0}
   player: {fileID: 4658423719987838014}
   gun: {fileID: 4658423719939800243}
---- !u!70 &2059707927
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4658423719987837987}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
 --- !u!114 &2059707925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,4 +242,4 @@ MonoBehaviour:
   entityData: {fileID: 11400000, guid: dcffc2ca524ab2b44ab424007310262e, type: 2}
   playerCollision: {fileID: 2059707925}
   playerMovement: {fileID: 4658423719987838015}
-  PlayerShoot: {fileID: 4658423719987838012}
+  playerShoot: {fileID: 4658423719987838012}

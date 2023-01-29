@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 using UnityEngine.UIElements;
 using UnityEditor;
 using System.Linq;
@@ -14,9 +14,8 @@ public class JukeboxManager : MonoBehaviour
 
     [Space, SerializeField] private AudioClip[] clips = new AudioClip[3];
     private List<Button> musicButtons = new List<Button>();
-    private bool show; // PLACEHOLDER
     private AudioSource mainSource;
-    VisualElement subRoot;    
+    VisualElement subRoot;
 
     private void Awake()
     {
@@ -30,31 +29,15 @@ public class JukeboxManager : MonoBehaviour
         mainSource = mainCam.GetComponent<AudioSource>();
     }
 
-    private void Update()
+    private void Show()
     {
-        // PLACEHOLDER: remplacer par player trigger enter
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            show = !show;
-            Display(show);
-        }
+        document.enabled = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Hide()
     {
-        Display(true); 
+        document.enabled = false;
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Display(false);         
-    }
-
-    private void Display(bool show)
-    {
-        // TODO : tween show/hide animation + sfx
-        document.enabled = show;
-    }    
 
     private void SetupButtonHandler()
     {
@@ -68,14 +51,10 @@ public class JukeboxManager : MonoBehaviour
 
     private void SetNewMusic(ClickEvent evt)
     {
-        // TODO : tween set new animation + sfx
-
         Button button = evt.currentTarget as Button;
         int buttonNumber = int.Parse(button.name.Substring(m_ButtonPrefix.Length));
 
         mainSource.clip = clips[buttonNumber];
         mainSource.Play();
-
-        // feedbacks pour tout : visuel ET sonore
     }
 }

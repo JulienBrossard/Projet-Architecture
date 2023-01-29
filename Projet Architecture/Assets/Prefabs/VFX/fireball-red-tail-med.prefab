@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 212885705596208536}
   - component: {fileID: 3377960153869487066}
   - component: {fileID: 4759228576660994117}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fireball-red-tail-med
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300018, guid: 8aeb9e233fbb8f14db39770841b78b94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0077616423, y: 0.24834186}

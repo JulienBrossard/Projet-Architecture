@@ -31,7 +31,6 @@ public class EnemySpawner : Entity
 
     IEnumerator Spawn()
     {
-        Debug.Log("spawning");
         int spawnCount = Random.Range(spawnerData.minNpcSpawn, spawnerData.maxNpcSpawn);
         for (int i = 0; i < spawnCount; i++)
         {
