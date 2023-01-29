@@ -27,7 +27,7 @@ public class PauseManager : MonoBehaviour
         }
 
         instance = this;
-        
+
         root = uiDocument.rootVisualElement;
         continueBtn = root.Q<Button>("continue");
         restartBtn = root.Q<Button>("restart");
@@ -39,7 +39,7 @@ public class PauseManager : MonoBehaviour
     {
         continueBtn.clicked += () => Continue();
         restartBtn.clicked += () => Restart();
-        mainMenuBtn.clicked+= () => MainMenu();
+        mainMenuBtn.clicked += () => MainMenu();
     }
 
     private void Update()
@@ -82,7 +82,7 @@ public class PauseManager : MonoBehaviour
     public void MainMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void End()
